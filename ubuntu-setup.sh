@@ -61,6 +61,13 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 # Fix to prevent % sign from occuring
 echo "unsetopt PROMPT_SP" >> ~/.zshrc
 
+echo "Installing fonts"
+cd ~/Downloads
+wget https://github.com/tonsky/FiraCode/releases/download/3.1/FiraCode_3.1.zip
+unzip FiraCode_3.1.zip
+cp ttf/* ~/.local/share/fonts
+fc-cache -f -v
+
 echo "Finished!"
 echo "Now what to do: "
 echo "1. Install the Ubuntu shell extension: https://extensions.gnome.org/extension/19/user-themes/ (make sure to press the 'click here to install browser extension' button"
