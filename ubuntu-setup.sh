@@ -80,5 +80,4 @@ echo "2. Open the ubuntu tweaks tool, set your applications appearence to Adwait
 echo "3. Restart your computer by running sudo reboot"
 echo "4. Run komorebi"
 echo "5. Open ubuntu tweaks tool, select flat-remix as your shell theme"
-echo "6. Open a new terminal (should be hyper terminal) and install the following packages using hyper i: hyper-spotify, hypercwd, hyperlinks, hyperline"
 echo "6. Celebrate! You're done with installing a basic environment!"
