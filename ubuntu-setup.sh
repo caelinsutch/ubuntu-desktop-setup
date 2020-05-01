@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Moving hyper config somewhere safe"
+cp ./.hyper.js ~/Downloads
+
 echo "Installing Chrome..."
 
 cd ~/Downloads
@@ -60,6 +63,8 @@ sudo gdebi deb
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /opt/Hyper/hyper 50
 # Fix to prevent % sign from occuring
 echo "unsetopt PROMPT_SP" >> ~/.zshrc
+rm ~/.hyper.js
+mv ~/Downloads/.hyper.js ~/.hyper.js
 
 echo "Installing fonts"
 cd ~/Downloads
