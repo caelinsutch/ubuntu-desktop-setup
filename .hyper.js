@@ -59,6 +59,7 @@ module.exports = {
       x-screen x-row {
         font-variant-ligatures: initial;
       }
+      x-row {line-height: 1}
     `,
 
     // if you're using a Linux setup which show native menus, set to false
@@ -71,7 +72,7 @@ module.exports = {
     showWindowControls: '',
 
     // custom padding (CSS format, i.e.: `top right bottom left`)
-    padding: '12px 14px',
+    padding: '14px 14px 14px',
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
@@ -143,7 +144,8 @@ module.exports = {
 
     // for advanced config flags please refer to https://hyper.is/#cfg
     hyperSpotify: {
-	position: 'top'
+	position: 'bottom',
+        margin: 'double'
     },
   },
 
