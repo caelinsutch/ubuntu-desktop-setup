@@ -54,8 +54,9 @@ echo "Installing Spaceship Prompt"
 npm install -g spaceship-prompt
 
 echo "Installing Hyper Terminal and setting as default"
+sudo apt-get install gdebi
 wget https://releases.hyper.is/download/deb
-sudo apt install ./hyper_3.0.2_amd64.deb
+sudo gdebi deb
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /opt/Hyper/hyper 50
 # Fix to prevent % sign from occuring
 echo "unsetopt PROMPT_SP" >> ~/.zshrc
