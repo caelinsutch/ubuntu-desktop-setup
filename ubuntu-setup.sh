@@ -70,6 +70,7 @@ echo "Installing fonts"
 cd ~/Downloads
 wget https://github.com/tonsky/FiraCode/releases/download/3.1/FiraCode_3.1.zip
 unzip FiraCode_3.1.zip
+mkdir ~/.local/share/fonts
 cp ttf/* ~/.local/share/fonts
 fc-cache -f -v
 
