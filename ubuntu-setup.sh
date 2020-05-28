@@ -20,6 +20,9 @@ sudo apt-get install git
 
 echo "Installing NVM and setting default to latest version"
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 source ~/.bashrc
 nvm install node
 nvm alias default node
@@ -48,9 +51,7 @@ sudo apt install ./komorebi-2.1-64-bit.deb
 echo "Installing ZSH and Ohmyzsh and setting to default"
 sudo apt-get install zsh
 sh -c $(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)
-echo `export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion` >> ~/.zshrc
+echo "[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM" >> ~/.zshrc
 chsh -s $(which zsh)
 
 echo "Installing Spaceship Prompt"
